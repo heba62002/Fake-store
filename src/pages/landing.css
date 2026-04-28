@@ -1,0 +1,209 @@
+
+
+/* الألوان الأساسية المستوحاة من الصورة */
+:root {
+  --bg-cream: #f9f7f2;
+  --text-dark: #1a1a1a;
+  --accent-blue: #a8dadc;
+  --soft-blue: #e0f2f1;
+}
+
+.landing {
+  font-family: 'Inter', sans-serif; /* يفضل استيراد خط أنيق */
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+}
+
+/* قسم الـ Hero */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10%;
+  background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=2070'); /* صورة تعبيرية للمجوهرات */
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  max-width: 600px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* الأزرار */
+.cta-btn {
+  padding: 12px 30px;
+  background-color: white;
+  color: var(--text-dark);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.cta-btn:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+/* قسم التقديم (The Revolution is now) */
+.intro-section {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: white;
+}
+
+.intro-section h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #2c3e50;
+}
+
+/* شبكة المميزات (Features Grid) */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 50px 10%;
+  background-color: var(--bg-cream);
+}
+
+.feature-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-card.blue {
+  background-color: var(--soft-blue);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* قسم التواصل (Contact Us) */
+.contact-section {
+  padding: 100px 10%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: var(--bg-cream);
+  font-family: inherit;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: var(--accent-blue);
+}
+
+.submit-btn {
+  padding: 15px;
+  background-color: var(--text-dark);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+}
+
+/* التذييل (Footer) - يمتد للنهاية بدون أطراف بيضاء */
+.main-footer {
+  background-color: var(--text-dark);
+  color: white;
+  padding: 60px 10% 30px;
+  width: 100%;
+  box-sizing: border-box; /* 💡 يضمن عدم وجود أطراف بيضاء */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-brand h3 {
+  letter-spacing: 5px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #555;
+}
